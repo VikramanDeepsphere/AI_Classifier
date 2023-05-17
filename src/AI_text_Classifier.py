@@ -76,7 +76,7 @@ def Text_Classifier():
                     pass
                 txt_content = ' '.join(txt_content.split())
                 with col2:
-                    # try:
+                    try:
                         if st.button("Submit"):
                             if len(txt_content)<400:
                                 vAR_response = find_the_input(txt_content)
@@ -92,8 +92,8 @@ def Text_Classifier():
                                 with cc1:
                                     df=pd.DataFrame({"Wordcount":default,"Result":result})
                                     st.dataframe(df)
-                    # except Exception as e:
-                        # st.error("Text cannot be extracted from Uploaded File")
+                    except Exception as e:
+                        st.error("Text cannot be extracted from Uploaded File")
         # PDF file
         elif vAR_file_type == 'PDF file':
             with col1:
