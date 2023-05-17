@@ -1,0 +1,41 @@
+/* Side bar colour */
+.css-6qob1r.e1fqkh3o3 {
+    background-color: #4c85e4;
+    font-family: sans-serif;
+}
+
+/* Sidebar button alignment*/
+input[type="submit"] {
+    border-radius: 2px;
+    background-color: #32CD32;
+    border: thick;
+    height: 42px;
+    width: 300px;
+}
+
+/* Sidebar fixed */
+section.css-vk3wp9.e1fqkh3o11 {
+    position: relative;
+    top: 2px;
+    background-color: rgb(240, 242, 246);
+    z-index: 999991;
+    min-width: 330px;
+    max-width: 330px;
+    transform: none;
+    transition: transform 300ms ease 0s, min-width 300ms ease 0s, max-width 300ms ease 0s;
+}
+/* Button fixed */
+.css-5rimss.e16nr0p34 {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* title Allignment */
+.css-5rimss.e16nr0p34 {
+    width: auto;
+}
+/* Sunbit button color */
+button.css-1n543e5.edgvbvh10 {
+    background: #32CD32;
+}
