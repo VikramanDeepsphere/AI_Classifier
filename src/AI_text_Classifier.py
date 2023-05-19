@@ -72,16 +72,16 @@ def Text_Classifier():
                     st.write("## ")
                     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
                 with col2:
-                    vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview1')
+                    vAR_preview1 = st.selectbox("",['Select','Yes','No'],key='preview1')
                 with col22:
-                    if vAR_preview == 'Yes':
+                    if vAR_preview1 == 'Yes':
                         st.write(txt_content)
-                    elif vAR_preview == 'No':
+                    elif vAR_preview1 == 'No':
                         pass
                     else:
                         pass
                 txt_content = ' '.join(txt_content.split())
-                if vAR_preview != "Select":
+                if vAR_preview1 != "Select":
                     with col2:
                         try:
                             st.markdown("")
@@ -121,16 +121,16 @@ def Text_Classifier():
                         st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
 
                     with col2:
-                        vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview2')
+                        vAR_preview2 = st.selectbox("",['Select','Yes','No'],key='preview2')
                     with col22:
-                        if vAR_preview == 'Yes':
+                        if vAR_preview2 == 'Yes':
                             st.write(vAR_pdf_content)
-                        elif vAR_preview == 'No':
+                        elif vAR_preview2 == 'No':
                             pass
                         else:
                             pass
                     vAR_pdf_content = ' '.join(vAR_pdf_content.split())
-                    if vAR_preview != "Select":
+                    if vAR_preview2 != "Select":
                         with col2:
                             st.markdown("")
                             if st.button("Submit",on_click=prev):
@@ -165,16 +165,16 @@ def Text_Classifier():
                 # st.write("## ")
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
             with col2:
-                vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview3')
+                vAR_preview3 = st.selectbox("",['Select','Yes','No'],key='preview3')
             with col22:    
-                if vAR_preview == 'Yes':
+                if vAR_preview3 == 'Yes':
                     st.write(vAR_text)
-                elif vAR_preview == 'No':
+                elif vAR_preview3 == 'No':
                     pass
                 else:
                     pass
             vAR_text = ' '.join(vAR_text.split())
-            if vAR_preview != "Select":
+            if vAR_preview3 != "Select":
                 with col2:
                     try:
                         st.markdown("")
