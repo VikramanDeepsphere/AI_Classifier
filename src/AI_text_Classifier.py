@@ -61,19 +61,19 @@ def Text_Classifier():
                 vAR_file = st.file_uploader('',type='txt')
             if vAR_file is not None:
                 txt_content = text_retrive(vAR_file)
-                with col1:
-                    st.write('# ')
-                    st.write('# ')
-                    st.write("## ")
-                    st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
-                with col2:
-                    vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
-                if vAR_preview == 'Yes':
-                    st.write(txt_content)
-                elif vAR_preview == 'No':
-                    pass
-                else:
-                    pass
+                # with col1:
+                #     st.write('# ')
+                #     st.write('# ')
+                #     st.write("## ")
+                #     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
+                # with col2:
+                #     vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
+                # if vAR_preview == 'Yes':
+                #     st.write(txt_content)
+                # elif vAR_preview == 'No':
+                #     pass
+                # else:
+                #     pass
                 txt_content = ' '.join(txt_content.split())
                 with col2:
                     try:
@@ -106,20 +106,20 @@ def Text_Classifier():
                 try:
                     header_footer_cuter(vAR_file)
                     vAR_pdf_content = pdf_text()
-                    with col1:
-                        st.write('# ')
-                        st.write('# ')
-                        st.write("## ")
-                        st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
+                    # with col1:
+                    #     st.write('# ')
+                    #     st.write('# ')
+                    #     st.write("## ")
+                    #     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
 
-                    with col2:
-                        vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw1')
-                        if vAR_preview == 'Yes':
-                            st.write(vAR_pdf_content)
-                        elif vAR_preview == 'No':
-                            pass
-                        else:
-                            pass
+                    # with col2:
+                    #     vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw1')
+                    #     if vAR_preview == 'Yes':
+                    #         st.write(vAR_pdf_content)
+                    #     elif vAR_preview == 'No':
+                    #         pass
+                    #     else:
+                    #         pass
                     vAR_pdf_content = ' '.join(vAR_pdf_content.split())
                     with col2:
                         if st.button("Submit"):
@@ -148,19 +148,19 @@ def Text_Classifier():
             vAR_link = st.text_input('')
         if vAR_link !="":
             vAR_text = get_paragraphs(vAR_link)
-            with col1:
-                st.write('# ')
-                # st.write('# ')
-                # st.write("## ")
-                st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
-            with col2:
-                vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
-                if vAR_preview == 'Yes':
-                    st.write(vAR_text)
-                elif vAR_preview == 'No':
-                    pass
-                else:
-                    pass
+            # with col1:
+            #     st.write('# ')
+            #     # st.write('# ')
+            #     # st.write("## ")
+            #     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
+            # with col2:
+            #     vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
+            #     if vAR_preview == 'Yes':
+            #         st.write(vAR_text)
+            #     elif vAR_preview == 'No':
+            #         pass
+            #     else:
+            #         pass
             vAR_text = ' '.join(vAR_text.split())
             with col2:
                 try:
