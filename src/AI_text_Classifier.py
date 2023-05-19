@@ -6,9 +6,11 @@ from src.web_Scapper import get_paragraphs
 from src.pdf import header_footer_cuter
 from src.pdf_textretrive import pdf_text,text_retrive
 import pandas as pd
-def prev():
+def prev1():
     st.session_state['preview1']="No"
+def prev2():
     st.session_state['preview2']="No"
+def prev3():
     st.session_state['preview3']="No"
 
 def Text_Classifier():
@@ -85,7 +87,7 @@ def Text_Classifier():
                     with col2:
                         try:
                             st.markdown("")
-                            if st.button("Submit",on_click=prev):
+                            if st.button("Submit",on_click=prev1):
                                 if len(txt_content)<400:
                                     vAR_response = find_the_input(txt_content)
                                     with col2:
@@ -133,7 +135,7 @@ def Text_Classifier():
                     if vAR_preview2 != "Select":
                         with col2:
                             st.markdown("")
-                            if st.button("Submit",on_click=prev):
+                            if st.button("Submit",on_click=prev2):
                                 if len(vAR_pdf_content)<400:
                                     vAR_response = find_the_input(vAR_pdf_content)
                                     with col2:
@@ -178,7 +180,7 @@ def Text_Classifier():
                 with col2:
                     try:
                         st.markdown("")
-                        if st.button("Submit",on_click=prev):
+                        if st.button("Submit",on_click=prev3):
                             if len(vAR_text)<400:
                                 vAR_response = find_the_input(txt_content)
                                 with col2:
