@@ -9,8 +9,8 @@ import pandas as pd
 
 def Text_Classifier():
     w1,col1,col2,w2=st.columns((1,1.5,2.5,1))
-    w12,col11,col22,w22=st.columns((1,1.5,2.5,1))
     cc2,cc1,cc3=st.columns((2,6,0.2))
+    col11,col22,col33=st.columns((1,3,1))
     with col1:
         st.write('# ')
         st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Input Type</span></p>", unsafe_allow_html=True)
@@ -68,12 +68,13 @@ def Text_Classifier():
                     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
                 with col2:
                     vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
-                if vAR_preview == 'Yes':
-                    st.write(txt_content)
-                elif vAR_preview == 'No':
-                    pass
-                else:
-                    pass
+                with col22:
+                    if vAR_preview == 'Yes':
+                        st.write(txt_content)
+                    elif vAR_preview == 'No':
+                        pass
+                    else:
+                        pass
                 txt_content = ' '.join(txt_content.split())
                 with col2:
                     try:
@@ -114,6 +115,7 @@ def Text_Classifier():
 
                     with col2:
                         vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw1')
+                    with col22:
                         if vAR_preview == 'Yes':
                             st.write(vAR_pdf_content)
                         elif vAR_preview == 'No':
@@ -155,6 +157,7 @@ def Text_Classifier():
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
             with col2:
                 vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
+            with col22:    
                 if vAR_preview == 'Yes':
                     st.write(vAR_text)
                 elif vAR_preview == 'No':
