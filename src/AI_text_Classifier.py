@@ -6,6 +6,10 @@ from src.web_Scapper import get_paragraphs
 from src.pdf import header_footer_cuter
 from src.pdf_textretrive import pdf_text,text_retrive
 import pandas as pd
+def prev():
+    st.session_state['preview1']="No"
+    st.session_state['preview2']="No"
+    st.session_state['preview3']="No"
 
 def Text_Classifier():
     w1,col1,col2,w2=st.columns((1,1.5,2.5,1))
@@ -68,7 +72,7 @@ def Text_Classifier():
                     st.write("## ")
                     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
                 with col2:
-                    vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
+                    vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview1')
                 with col22:
                     if vAR_preview == 'Yes':
                         st.write(txt_content)
@@ -80,7 +84,7 @@ def Text_Classifier():
                 with col2:
                     try:
                         st.markdown("")
-                        if st.button("Submit"):
+                        if st.button("Submit",on_click=prev):
                             if len(txt_content)<400:
                                 vAR_response = find_the_input(txt_content)
                                 with col2:
@@ -116,7 +120,7 @@ def Text_Classifier():
                         st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
 
                     with col2:
-                        vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw1')
+                        vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview2')
                     with col22:
                         if vAR_preview == 'Yes':
                             st.write(vAR_pdf_content)
@@ -127,7 +131,7 @@ def Text_Classifier():
                     vAR_pdf_content = ' '.join(vAR_pdf_content.split())
                     with col2:
                         st.markdown("")
-                        if st.button("Submit"):
+                        if st.button("Submit",on_click=prev):
                             if len(vAR_pdf_content)<400:
                                 vAR_response = find_the_input(vAR_pdf_content)
                                 with col2:
@@ -159,7 +163,7 @@ def Text_Classifier():
                 # st.write("## ")
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
             with col2:
-                vAR_preview = st.selectbox("",['Select','Yes','No'],key='prw2')
+                vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview3')
             with col22:    
                 if vAR_preview == 'Yes':
                     st.write(vAR_text)
@@ -171,7 +175,7 @@ def Text_Classifier():
             with col2:
                 try:
                     st.markdown("")
-                    if st.button("Submit"):
+                    if st.button("Submit",on_click=prev):
                         if len(vAR_text)<400:
                             vAR_response = find_the_input(txt_content)
                             with col2:
