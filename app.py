@@ -31,7 +31,7 @@ st.markdown("<hr style=height:2.5px;background-color:gray>",unsafe_allow_html=Tr
 
 with st.sidebar:
     selected = st.selectbox("",
-                     ['Select Application','AI Text Classifier'],key='text')
+                     ['Select Application','Content Classifier'],key='text')
     Library = st.selectbox("",
                      ["Library Used","Streamlit","Image","Pandas","Requests"],key='text1')
     Gcp_cloud = st.selectbox("",
@@ -49,7 +49,7 @@ with st.sidebar:
 #--------------function calling-----------#
 if __name__ == "__main__":
     try:
-        if selected == 'AI Text Classifier':
+        if selected == 'Content Classifier':
             Text_Classifier()
 
     except BaseException as error:
