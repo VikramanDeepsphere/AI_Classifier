@@ -44,7 +44,7 @@ def Text_Classifier():
                             vAR_response = find_the_input(j)
                             result.append(vAR_response)
                         default=rowgen(result)
-                        with col22:
+                        with cc1:
                             df=pd.DataFrame({"Wordcount":default,"Result":result})
                             st.dataframe(df)
     # files format
@@ -81,26 +81,27 @@ def Text_Classifier():
                     else:
                         pass
                 txt_content = ' '.join(txt_content.split())
-                with col2:
-                    try:
-                        st.markdown("")
-                        if st.button("Submit",on_click=prev):
-                            if len(txt_content)<400:
-                                vAR_response = find_the_input(txt_content)
-                                with col2:
-                                    st.success(vAR_response)
-                            else:
-                                prompt=spliter(txt_content)
-                                result=[]
-                                for j in prompt:
-                                    vAR_response = find_the_input(j)
-                                    result.append(vAR_response)
-                                default=rowgen(result)
-                                with col22:
-                                    df=pd.DataFrame({"Wordcount":default,"Result":result})
-                                    st.dataframe(df)
-                    except Exception as e:
-                        st.error("Text cannot be extracted from Uploaded File")
+                if vAR_preview != "Select":
+                    with col2:
+                        try:
+                            st.markdown("")
+                            if st.button("Submit",on_click=prev):
+                                if len(txt_content)<400:
+                                    vAR_response = find_the_input(txt_content)
+                                    with col2:
+                                        st.success(vAR_response)
+                                else:
+                                    prompt=spliter(txt_content)
+                                    result=[]
+                                    for j in prompt:
+                                        vAR_response = find_the_input(j)
+                                        result.append(vAR_response)
+                                    default=rowgen(result)
+                                    with cc1:
+                                        df=pd.DataFrame({"Wordcount":default,"Result":result})
+                                        st.dataframe(df)
+                        except Exception as e:
+                            st.error("Text cannot be extracted from Uploaded File")
         # PDF file
         elif vAR_file_type == 'PDF file':
             with col1:
@@ -129,23 +130,24 @@ def Text_Classifier():
                         else:
                             pass
                     vAR_pdf_content = ' '.join(vAR_pdf_content.split())
-                    with col2:
-                        st.markdown("")
-                        if st.button("Submit",on_click=prev):
-                            if len(vAR_pdf_content)<400:
-                                vAR_response = find_the_input(vAR_pdf_content)
-                                with col2:
-                                    st.success(vAR_response)
-                            else:
-                                prompt=spliter(vAR_pdf_content)
-                                result=[]
-                                for j in prompt:
-                                    vAR_response = find_the_input(j)
-                                    result.append(vAR_response)
-                                default=rowgen(result)
-                                with col22:
-                                    df=pd.DataFrame({"Wordcount":default,"Result":result})
-                                    st.dataframe(df)
+                    if vAR_preview != "Select":
+                        with col2:
+                            st.markdown("")
+                            if st.button("Submit",on_click=prev):
+                                if len(vAR_pdf_content)<400:
+                                    vAR_response = find_the_input(vAR_pdf_content)
+                                    with col2:
+                                        st.success(vAR_response)
+                                else:
+                                    prompt=spliter(vAR_pdf_content)
+                                    result=[]
+                                    for j in prompt:
+                                        vAR_response = find_the_input(j)
+                                        result.append(vAR_response)
+                                    default=rowgen(result)
+                                    with cc1:
+                                        df=pd.DataFrame({"Wordcount":default,"Result":result})
+                                        st.dataframe(df)
                 except Exception as e:
                     st.error("Text cannot be extracted from Uploaded File")
     # websit input
@@ -172,23 +174,24 @@ def Text_Classifier():
                 else:
                     pass
             vAR_text = ' '.join(vAR_text.split())
-            with col2:
-                try:
-                    st.markdown("")
-                    if st.button("Submit",on_click=prev):
-                        if len(vAR_text)<400:
-                            vAR_response = find_the_input(txt_content)
-                            with col2:
-                                st.success(vAR_response)
-                        else:
-                            prompt=spliter(vAR_text)
-                            result=[]
-                            for j in prompt:
-                                vAR_response = find_the_input(j)
-                                result.append(vAR_response)
-                            default=rowgen(result)
-                            with col22:
-                                df=pd.DataFrame({"Wordcount":default,"Result":result})
-                                st.dataframe(df)
-                except Exception as e:
-                    st.error("Text cannot be extracted from Uploaded URL")
+            if vAR_preview != "Select":
+                with col2:
+                    try:
+                        st.markdown("")
+                        if st.button("Submit",on_click=prev):
+                            if len(vAR_text)<400:
+                                vAR_response = find_the_input(txt_content)
+                                with col2:
+                                    st.success(vAR_response)
+                            else:
+                                prompt=spliter(vAR_text)
+                                result=[]
+                                for j in prompt:
+                                    vAR_response = find_the_input(j)
+                                    result.append(vAR_response)
+                                default=rowgen(result)
+                                with cc1:
+                                    df=pd.DataFrame({"Wordcount":default,"Result":result})
+                                    st.dataframe(df)
+                    except Exception as e:
+                        st.error("Text cannot be extracted from Uploaded URL")
