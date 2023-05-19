@@ -27,6 +27,7 @@ def Text_Classifier():
             vAR_text = ' '.join(vAR_text.split())
         if vAR_text !="":
             with col2:
+                st.markdown("")
                 if st.button("Submit"):
                     if len(vAR_text)<400:
                         vAR_response = find_the_input(vAR_text)
@@ -78,6 +79,7 @@ def Text_Classifier():
                 txt_content = ' '.join(txt_content.split())
                 with col2:
                     try:
+                        st.markdown("")
                         if st.button("Submit"):
                             if len(txt_content)<400:
                                 vAR_response = find_the_input(txt_content)
@@ -124,6 +126,7 @@ def Text_Classifier():
                             pass
                     vAR_pdf_content = ' '.join(vAR_pdf_content.split())
                     with col2:
+                        st.markdown("")
                         if st.button("Submit"):
                             if len(vAR_pdf_content)<400:
                                 vAR_response = find_the_input(vAR_pdf_content)
@@ -167,6 +170,7 @@ def Text_Classifier():
             vAR_text = ' '.join(vAR_text.split())
             with col2:
                 try:
+                    st.markdown("")
                     if st.button("Submit"):
                         if len(vAR_text)<400:
                             vAR_response = find_the_input(txt_content)
