@@ -73,7 +73,7 @@ def Text_Classifier():
                     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
                 with col2:
                     vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview1')
-                with col22:
+                with cc1:
                     if vAR_preview == 'Yes':
                         st.write(txt_content)
                     elif vAR_preview == 'No':
@@ -121,7 +121,7 @@ def Text_Classifier():
 
                     with col2:
                         vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview2')
-                    with col22:
+                    with cc1:
                         if vAR_preview == 'Yes':
                             st.write(vAR_pdf_content)
                         elif vAR_preview == 'No':
@@ -164,7 +164,7 @@ def Text_Classifier():
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
             with col2:
                 vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview3')
-            with col22:    
+            with cc1:    
                 if vAR_preview == 'Yes':
                     st.write(vAR_text)
                 elif vAR_preview == 'No':
