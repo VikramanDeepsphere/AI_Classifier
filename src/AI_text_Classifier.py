@@ -44,7 +44,7 @@ def Text_Classifier():
                             vAR_response = find_the_input(j)
                             result.append(vAR_response)
                         default=rowgen(result)
-                        with cc1:
+                        with col22:
                             df=pd.DataFrame({"Wordcount":default,"Result":result})
                             st.dataframe(df)
     # files format
@@ -73,7 +73,7 @@ def Text_Classifier():
                     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
                 with col2:
                     vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview1')
-                with cc1:
+                with col22:
                     if vAR_preview == 'Yes':
                         st.write(txt_content)
                     elif vAR_preview == 'No':
@@ -96,7 +96,7 @@ def Text_Classifier():
                                     vAR_response = find_the_input(j)
                                     result.append(vAR_response)
                                 default=rowgen(result)
-                                with cc1:
+                                with col22:
                                     df=pd.DataFrame({"Wordcount":default,"Result":result})
                                     st.dataframe(df)
                     except Exception as e:
@@ -121,7 +121,7 @@ def Text_Classifier():
 
                     with col2:
                         vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview2')
-                    with cc1:
+                    with col22:
                         if vAR_preview == 'Yes':
                             st.write(vAR_pdf_content)
                         elif vAR_preview == 'No':
@@ -143,7 +143,7 @@ def Text_Classifier():
                                     vAR_response = find_the_input(j)
                                     result.append(vAR_response)
                                 default=rowgen(result)
-                                with cc1:
+                                with col22:
                                     df=pd.DataFrame({"Wordcount":default,"Result":result})
                                     st.dataframe(df)
                 except Exception as e:
@@ -164,7 +164,7 @@ def Text_Classifier():
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Preview</span></p>", unsafe_allow_html=True)
             with col2:
                 vAR_preview = st.selectbox("",['Select','Yes','No'],key='preview3')
-            with cc1:    
+            with col22:    
                 if vAR_preview == 'Yes':
                     st.write(vAR_text)
                 elif vAR_preview == 'No':
@@ -187,7 +187,7 @@ def Text_Classifier():
                                 vAR_response = find_the_input(j)
                                 result.append(vAR_response)
                             default=rowgen(result)
-                            with cc1:
+                            with col22:
                                 df=pd.DataFrame({"Wordcount":default,"Result":result})
                                 st.dataframe(df)
                 except Exception as e:
