@@ -29,7 +29,7 @@ with imcol3:
 st.markdown("<p style='text-align: center; color: black; font-size:25px;'><span style='font-weight: bold'>ChatGPT Application: </span>Content Classifier</p>", unsafe_allow_html=True)
 # st.markdown("<div style='display: flex; margin-top: -45px ; justify-content: center;'><hr style='height: 2px; background-color: gray; width: 440px; border: none;'></div>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: blue;margin-top: -10px ;font-size:20px;'><span style='font-weight: bold'></span>Classify Whether a Given Content is Written by Human or AI</p>", unsafe_allow_html=True)
-st.markdown("<hr style=height:2.5px;background-color:gray;>",unsafe_allow_html=True)
+st.markdown("<hr style=height:2.5px;margin-top:0px;background-color:gray;>",unsafe_allow_html=True)
 #---------Side bar-------#
 
 with st.sidebar:
