@@ -26,7 +26,7 @@ with imcol2:
     st.write("")
 with imcol3:
     st.write("")
-st.markdown("<p style='text-align: center; color: black; font-size:22px;'><span style='font-weight: bold'>ChatGPT Application: </span>Content Classifier</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: black; font-size:25px;'><span style='font-weight: bold'>ChatGPT Application: </span>Content Classifier</p>", unsafe_allow_html=True)
 # st.markdown("<div style='display: flex; margin-top: -45px ; justify-content: center;'><hr style='height: 2px; background-color: gray; width: 440px; border: none;'></div>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: blue;margin-top: -10px ;font-size:20px;'><span style='font-weight: bold'></span>Classify Whether a Given Content is Written by Human or AI</p>", unsafe_allow_html=True)
 st.markdown("<hr style=height:2.5px;margin-top:0px;background-color:gray;>",unsafe_allow_html=True)
@@ -48,9 +48,9 @@ with st.sidebar:
     st.markdown("<p style='text-align: center; color: White; font-size:20px;'>Build & Deployed on<span style='font-weight: bold'></span></p>", unsafe_allow_html=True)
     s1,s2=st.columns((2,2))
     with s1:
-        st.image('image/002.jpg')
+        st.image('image/002.png')
     with s2:    
-        st.image("image/Google-Cloud-Platform-GCP-logo.png")
+        st.image("image/oie_png.png")
 #--------------function calling-----------#
 if __name__ == "__main__":
     try:
