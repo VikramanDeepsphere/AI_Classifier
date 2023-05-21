@@ -18,7 +18,7 @@ from src.AI_text_Classifier import Text_Classifier
 
 with open('style/final.css') as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
-imcol1, imcol2, imcol3 = st.columns((3.3,5,2.5))
+imcol1, imcol2, imcol3 = st.columns((3,5,2))
 with imcol1:
     st.write("")
 with imcol2:
