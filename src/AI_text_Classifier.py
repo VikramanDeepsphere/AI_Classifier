@@ -14,12 +14,12 @@ def prev3():
     st.session_state['preview3']="No"
 
 def Text_Classifier():
-    w1,col1,col2,w2=st.columns((1,1.5,2.5,1))
+    w1,col1,col2,w2=st.columns((1.5,2.5,4,.1))
     cc2,cc1,cc3=st.columns((2,6,0.2))
-    col11,col22,col33=st.columns((1.2,5,1))
+    col11,col22,col33=st.columns((2,6,0.2))
     with col1:
         st.write('# ')
-        st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Input Type</span></p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Model Input Type</span></p>", unsafe_allow_html=True)
     with col2:
         vAR_input = st.selectbox('',['Select','Text input','File format','Website URL'])
 
@@ -27,7 +27,7 @@ def Text_Classifier():
     if vAR_input == 'Text input':
         with col1:
             st.write('# ')
-            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Input Text</span></p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Model Input Text</span></p>", unsafe_allow_html=True)
         with col2:
             vAR_text = st.text_area('')
             vAR_text = ' '.join(vAR_text.split())
@@ -53,7 +53,7 @@ def Text_Classifier():
     elif vAR_input == 'File format':
         with col1:
             st.write('# ')
-            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Enter File format</span></p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Select File Format</span></p>", unsafe_allow_html=True)
         with col2:
             vAR_file_type = st.selectbox("",['Select','Text file','PDF file'])
         
@@ -63,7 +63,7 @@ def Text_Classifier():
             with col1:
                 st.write('## ')
                 st.write('# ')
-                st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Upload File Here</span></p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Upload File</span></p>", unsafe_allow_html=True)
             with col2:
                 vAR_file = st.file_uploader('',type='txt')
             if vAR_file is not None:
@@ -109,7 +109,7 @@ def Text_Classifier():
             with col1:
                 st.write('## ')
                 st.write('# ')
-                st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Upload File Here</span></p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Upload File</span></p>", unsafe_allow_html=True)
             with col2:
                 vAR_file = st.file_uploader('',type='pdf')
             if vAR_file is not None:
@@ -156,7 +156,7 @@ def Text_Classifier():
     elif vAR_input == 'Website URL':
         with col1:
             st.write('# ')
-            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Enter the Website link</span></p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: bold'>Enter Valid Web URL</span></p>", unsafe_allow_html=True)
         with col2:
             vAR_link = st.text_input('')
         if vAR_link !="":

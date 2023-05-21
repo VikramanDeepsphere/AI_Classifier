@@ -18,15 +18,18 @@ from src.AI_text_Classifier import Text_Classifier
 
 with open('style/final.css') as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
-imcol1, imcol2, imcol3 = st.columns((2,5,3))
+imcol1, imcol2, imcol3 = st.columns((2,5,1.5))
 with imcol1:
     st.write("")
 with imcol2:
     st.image('image/Logo_final.png')
+    st.write("")
 with imcol3:
     st.write("")
-st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>To classify whether AI or Human-generated the given content.</p>", unsafe_allow_html=True)
-st.markdown("<hr style=height:2.5px;background-color:gray>",unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>ChatGPT Application: </span>Content ClassifierContent Classifier (Not Text Classifier)</p>", unsafe_allow_html=True)
+st.markdown("<div style='display: flex; justify-content: center;'><hr style='height: 2px; background-color: gray; width: 600px; margin-top:-10px; border: none;'></div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: black; margin-top:-30px; font-size:20px;'><span style='font-weight: bold'></span>Classify Whether a Given Content is Written by Human or AI</p>", unsafe_allow_html=True)
+st.markdown("<hr style=height:2.5px;background-color:gray;>",unsafe_allow_html=True)
 #---------Side bar-------#
 
 with st.sidebar:
@@ -43,7 +46,9 @@ with st.sidebar:
     st.sidebar.markdown(href, unsafe_allow_html=True)
     st.markdown("### ")
     st.markdown("<p style='text-align: center; color: White; font-size:20px;'>Build & Deployed on<span style='font-weight: bold'></span></p>", unsafe_allow_html=True)
-    s1,s2,s3=st.columns((2,3,2))
+    s1,s2=st.columns((2,2))
+    with s1:
+        st.image('image/002.jpg')
     with s2:    
         st.image("image/Google-Cloud-Platform-GCP-logo.png")
 #--------------function calling-----------#
