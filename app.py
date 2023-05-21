@@ -27,8 +27,8 @@ with imcol2:
 with imcol3:
     st.write("")
 st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>ChatGPT Application: </span>Content Classifier</p>", unsafe_allow_html=True)
-# st.markdown("<div style='display: flex; justify-content: center;'><hr style='height: 2px; background-color: gray; width: 600px; margin-top:-10px; border: none;'></div>", unsafe_allow_html=True)
-st.markdown("<hr style=height:2.5px;background-color:gray;>",unsafe_allow_html=True)
+st.markdown("<div style='display: flex; justify-content: center;'><hr style='height: 2px; background-color: gray; width: 600px; margin-top:-10px; border: none;'></div>", unsafe_allow_html=True)
+# st.markdown("<hr style=height:2.5px;background-color:gray;>",unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'></span>Classify Whether a Given Content is Written by Human or AI</p>", unsafe_allow_html=True)
 #---------Side bar-------#
 
